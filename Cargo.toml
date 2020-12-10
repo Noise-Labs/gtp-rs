@@ -1,0 +1,11 @@
+[package]
+name = "gtp-rs"
+version = "0.1.0"
+authors = ["Misko Lee imiskolee@gmail.com"]
+edition = "2018"
+
+[lib]
+path = "src/mod.rs"
+
+[dependencies]
+nom = "6.0.1"
