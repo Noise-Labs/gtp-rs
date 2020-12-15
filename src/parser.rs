@@ -42,7 +42,9 @@ named!(pub information<&[u8],Information>,
 fn test_information() {
     let f = include_bytes!("../examples/that girl.gp5");
     let result = information(&f[31..f.len()-1]);
-    println!("{:?}",result.unwrap());
+    let (i,info) = result.unwrap();
+    print!("{:?}",i);
+    assert_eq!(std::str::from_utf8(info.title).unwrap(),"\tthat girl");
 }
 
 #[test]
