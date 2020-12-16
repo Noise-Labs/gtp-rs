@@ -1,8 +1,9 @@
-
+pub static VERSION_STRING_PREFIX:&'static str = "FICHIER GUITAR PRO ";
 
 #[derive(Debug)]
 pub struct Header<'a>{
     pub version: &'a [u8],
+    pub version_number: u32,
     pub information: Information<'a>,
 }
 
